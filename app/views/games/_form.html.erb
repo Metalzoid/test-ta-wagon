@@ -1,0 +1,10 @@
+<%= simple_form_for [game, party] do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <%= f.input :word, required: true, class: "bg-white", label: false %>
+    <%= f.hidden_field :ten_letters_list, required: true, class: "bg-white" %>
+  </div>
+  <div class="form-actions d-flex justify-content-center">
+    <%= f.button :submit, "Jouer", class: "btn btn-primary button-rounded" %>
+  </div>
+<% end %>

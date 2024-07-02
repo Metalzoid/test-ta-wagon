@@ -1,0 +1,18 @@
+<div class="container text-center">
+  <p>Mon score = <%= @game.score %></p>
+  <div class="row my-3">
+    <% @party.letters[0..4].each do |letter| %>
+      <div class="col">
+        <div class="card-letter"><%= letter %></div>
+      </div>
+    <% end %>
+    </div>
+    <div class="row my-3">
+    <% @party.letters[5..9].each do |letter| %>
+      <div class="col">
+        <div class="card-letter"><%= letter %></div>
+      </div>
+    <% end %>
+  </div>
+  <%= render "form", game: @game, party: @party %>
+</div>
